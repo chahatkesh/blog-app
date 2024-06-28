@@ -2,7 +2,7 @@
 - Created Full Stack Blog App Using - Next JS &amp; MongoDB
 - All details are given below 👇
 
- <br/> <br/>
+ <br/> 
 
  
 <div align="left">
@@ -23,14 +23,14 @@
   <img width="12" />
 </div>
 
-<br/> <br/>
+<br/> 
 
 
 ## 💪 Demo
 - Deployed on Netlify & Vercel
 - Deployed Link : [Click Here](https://)
   
-<br/> <br/>
+<br/> 
 
 
 ## 💻  Run Locally
