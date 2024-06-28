@@ -28,7 +28,7 @@
 
 ## 💪 Demo
 - Deployed on Netlify & Vercel
-- Deployed Link : [Click Here]((https://blog-app-nine-mauve.vercel.app/))
+- Deployed Link : [Click Here](https://blog-app-nine-mauve.vercel.app/)
   
 <br/> 
 
