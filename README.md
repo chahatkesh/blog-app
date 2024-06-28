@@ -55,7 +55,7 @@ Start the server
   npm run dev
 ```
 
- <br/> <br/>
+ <br/>
  
 
 ## 🔗 Links
@@ -63,9 +63,6 @@ Start the server
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chahatkesharwani)
 
- <br/> <br/>
-
  
 ## 👨🏻 Authors
-
-- [@chahatkesh](https://www.github.com/chahatkesh)
+[@chahatkesh](https://www.github.com/chahatkesh)
