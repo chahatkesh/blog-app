@@ -4,22 +4,21 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Footer from "@/Components/Footer";
 import Link from "next/link";
+import axios from "axios";
 
 const Page = ({ params }) => {
   const [data, setData] = useState(null);
-  const fetchBlogData = () => {
-    for (let i = 0; i < blog_data.length; i++) {
-      if (Number(params.id) === blog_data[i].id) {
-        setData(blog_data[i]);
-        console.log(blog_data[i]);
-        break;
-      }
-    }
+  const fetchBlogData = async () => {
+    const response = await axios.get("/api/blog", {
+      params: { id: params.id },
+    });
+    setData(response.data);
   };
 
   useEffect(() => {
     fetchBlogData();
   }, []);
+
   return data ? (
     <>
       <div className="bg-gray-200 py-5 px-5 md:px-12 lg:px-28">
