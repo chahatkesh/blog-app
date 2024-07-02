@@ -13,7 +13,7 @@ const BlogList = () => {
   };
 
   useEffect(() => {
-    fetchBlogs;
+    fetchBlogs();
   }, []);
 
   return (
