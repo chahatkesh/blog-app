@@ -35,7 +35,7 @@ const Page = ({ params }) => {
             Get Started <Image src={assets.arrow} alt="get started" />
           </button>
         </div>
-        <div className="text-center my-24">
+        <div className="overflow-hidden text-center my-24">
           <h1 className="text-2xl sm:text-5xl font-semibold max-w-[700px] mx-auto">
             {data.title}
           </h1>
@@ -60,7 +60,7 @@ const Page = ({ params }) => {
           alt=""
         />
         <h1 className="my-8 text-[26px] font-semibold">Introduction :</h1>
-        <p>{data.description}</p>
+        <p className="overflow-hidden">{data.description}</p>
         <div className="my-24">
           <p className="text-black font font-semibold my-4">
             Share this article on social media
