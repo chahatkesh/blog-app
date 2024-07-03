@@ -39,11 +39,6 @@ Clone the project
 ```bash
   git clone https://github.com/chahatkesh/blog-app.git
 ```
-Go to the project directory
-
-```bash
-  cd client
-```
 Install dependencies
 
 ```bash
