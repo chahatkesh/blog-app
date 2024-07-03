@@ -4,7 +4,6 @@ import Link from "next/link";
 import { assets, blog_data } from "@/Assets/assets";
 
 const BlogItem = ({ title, description, image, category, id }) => {
-  const newdesc = description.slice(0, 130);
   const newtitle = title.slice(0, 50);
   return (
     <>
@@ -25,7 +24,9 @@ const BlogItem = ({ title, description, image, category, id }) => {
           <h5 className="mb-2 text-lg font-medium tracking-tight text-gray-900">
             {newtitle}
           </h5>
-          <p className="mb-3 text-sm tracking-tight text-gray-700">{newdesc}</p>
+          <p
+            className="mb-3 text-sm tracking-tight text-gray-700"
+            dangerouslySetInnerHTML={{ __html: description.slice(0, 120) }}></p>
           <Link
             href={`/blogs/${id}`}
             className="inline-flex items-center py-2 font-semibold text-center">

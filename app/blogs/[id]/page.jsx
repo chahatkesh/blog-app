@@ -59,8 +59,9 @@ const Page = ({ params }) => {
           src={data.image}
           alt=""
         />
-        <h1 className="my-8 text-[26px] font-semibold">Introduction :</h1>
-        <p className="overflow-hidden">{data.description}</p>
+        <div
+          className="blog-content"
+          dangerouslySetInnerHTML={{ __html: data.description }}></div>
         <div className="my-24">
           <p className="text-black font font-semibold my-4">
             Share this article on social media
