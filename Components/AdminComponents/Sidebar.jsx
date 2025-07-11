@@ -16,19 +16,19 @@ const Sidebar = () => {
               href="/admin/addProduct"
               className="flex items-center border border-black gap-3 font-medium px-3 py-2 bg-white shadow-[-5px_5px_0px_#000]">
               <Image src={assets.add_icon} width={28} alt="" />
-              <p>Add Blog</p>
+              <p className="hidden md:block">Add Blog</p>
             </Link>
             <Link
               href="/admin/blogList"
               className="mt-5 flex items-center border border-black gap-3 font-medium px-3 py-2 bg-white shadow-[-5px_5px_0px_#000]">
               <Image src={assets.blog_icon} width={28} alt="" />
-              <p>Blog List</p>
+              <p className="hidden md:block">Blog List</p>
             </Link>
             <Link
               href="/admin/subscriptions"
               className="mt-5 flex items-center border border-black gap-3 font-medium px-3 py-2 bg-white shadow-[-5px_5px_0px_#000]">
               <Image src={assets.email_icon} width={28} alt="" />
-              <p>Subscriptions</p>
+              <p className="hidden md:block">Subscriptions</p>
             </Link>
           </div>
         </div>
