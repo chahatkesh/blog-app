@@ -1,6 +1,6 @@
-# Modern Blog Platform
+# Blogger - Where Stories Come to Life
 
-A full-stack blog application built with Next.js 14 and MongoDB, featuring a modern admin panel, email subscriptions, and responsive design.
+A sophisticated full-stack blog platform that have best the blogging experience for both creators and readers. Built with Next.js 14, MongoDB, and Cloudinary for good performance and scalability.
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.2.4-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
