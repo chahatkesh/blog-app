@@ -69,10 +69,41 @@ const Page = ({ params }) => {
           <p className="text-black font font-semibold my-4">
             Share this article on social media
           </p>
-          <div className="flex">
-            <Image src={assets.facebook_icon} width={50} alt="" />
-            <Image src={assets.twitter_icon} width={50} alt="" />
-            <Image src={assets.googleplus_icon} width={50} alt="" />
+          <div className="flex gap-2">
+            <Image 
+              src={assets.facebook_icon} 
+              width={50} 
+              alt="Share on Facebook"
+              className="cursor-pointer hover:opacity-80 transition-opacity"
+              onClick={() => {
+                const url = window.location.href;
+                const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                window.open(facebookUrl, '_blank', 'width=600,height=400');
+              }}
+            />
+            <Image 
+              src={assets.twitter_icon} 
+              width={50} 
+              alt="Share on Twitter"
+              className="cursor-pointer hover:opacity-80 transition-opacity"
+              onClick={() => {
+                const url = window.location.href;
+                const text = `Check out this blog post: ${data.title}`;
+                const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+                window.open(twitterUrl, '_blank', 'width=600,height=400');
+              }}
+            />
+            <Image 
+              src={assets.googleplus_icon} 
+              width={50} 
+              alt="Share on LinkedIn"
+              className="cursor-pointer hover:opacity-80 transition-opacity"
+              onClick={() => {
+                const url = window.location.href;
+                const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+                window.open(linkedinUrl, '_blank', 'width=600,height=400');
+              }}
+            />
           </div>
         </div>
       </div>
