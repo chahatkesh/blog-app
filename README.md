@@ -149,7 +149,7 @@ blog-app/
 ├── lib/                          # Utility libraries
 │   ├── config/db.js              # Database connection
 │   └── models/                   # Mongoose schemas
-├── Assets/                       # Static assets and icons
+├── Assets/                       # Static assets, svgs and icons
 └── public/                       # Public files and uploads
 ```
 
