@@ -247,13 +247,13 @@ The application is deployed on Vercel and can be accessed at:
 ## Development Workflow
 
 ```mermaid
-gitgraph
-    commit id: "Initial Setup"
+gitGraph
+    commit "Initial Setup"
     branch feature
     checkout feature
-    commit id: "Add Feature"
-    commit id: "Write Tests"
+    commit "Add Feature"
+    commit "Write Tests"
     checkout main
     merge feature
-    commit id: "Deploy to Production"
+    commit "Deploy to Production"
 ```
