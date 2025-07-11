@@ -53,12 +53,12 @@ graph TB
 - **Dynamic Blog System**: Create, read, update, and delete blog posts
 - **Category Filtering**: Filter blogs by Technology, Startup, and Lifestyle categories
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Image Management**: Upload and manage blog thumbnails and author images
+- **Image Management**: Cloud-based image upload and storage with Cloudinary
 - **Email Subscriptions**: Newsletter subscription system with admin management
 
 ### Admin Panel
 - **Content Management**: Full CRUD operations for blog posts
-- **Rich Media Upload**: Image upload with automatic file handling
+- **Rich Media Upload**: Image upload with Cloudinary cloud storage
 - **Subscription Management**: View and manage email subscribers
 - **Analytics Dashboard**: Track blog engagement and subscriber metrics
 
@@ -81,6 +81,7 @@ graph TB
 - **Next.js API Routes** - Serverless API endpoints
 - **MongoDB 8.4.4** - NoSQL database
 - **Mongoose** - MongoDB object modeling
+- **Cloudinary** - Cloud-based image storage and optimization
 - **Node.js** - Runtime environment
 
 ### Development Tools
@@ -147,7 +148,9 @@ blog-app/
 │   ├── Header.jsx                # Site header and navigation
 │   └── Footer.jsx                # Site footer
 ├── lib/                          # Utility libraries
-│   ├── config/db.js              # Database connection
+│   ├── config/
+│   │   ├── db.js                 # Database connection
+│   │   └── cloudinary.js         # Cloudinary configuration
 │   └── models/                   # Mongoose schemas
 ├── Assets/                       # Static assets, svgs and icons
 └── public/                       # Public files and uploads
@@ -158,6 +161,7 @@ blog-app/
 ### Prerequisites
 - Node.js 18+ 
 - MongoDB Atlas account or local MongoDB installation
+- Cloudinary account for image storage
 - Git
 
 ### Local Development
@@ -177,13 +181,29 @@ blog-app/
    
    Create a `.env.local` file in the root directory:
    ```env
+   # Database
    MONGODB_URI=your_mongodb_connection_string
+   
+   # Cloudinary Configuration (for image uploads)
+   CLOUDINARY_CLOUD_NAME=your_cloud_name
+   CLOUDINARY_API_KEY=your_api_key
+   CLOUDINARY_API_SECRET=your_api_secret
    ```
+
+   **Cloudinary Setup:**
+   1. Sign up at [cloudinary.com](https://cloudinary.com/)
+   2. Get your credentials from the dashboard:
+      - Cloud Name (found at the top of dashboard)
+      - API Key (in Account Details section)
+      - API Secret (in Account Details section - click "reveal")
+   3. Replace the placeholder values in `.env.local`
 
 4. **Start development server**
    ```bash
    npm run dev
    ```
+   
+   **Note**: The app is pre-configured to work with Cloudinary images through Next.js Image Optimization. No additional configuration needed.
 
 5. **Access the application**
    - Frontend: http://localhost:3000
