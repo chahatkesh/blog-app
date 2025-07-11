@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { assets } from "@/Assets/assets";
 import { toast } from "react-toastify";
 import axios from "axios";
@@ -23,15 +24,19 @@ const Header = () => {
     <>
       <div className="py-5 px-5 md:px-12 lg:px-28">
         <div className="flex justify-between items-center">
-          <Image
-            className="w-[130px] sm:w-[150px]"
-            src={assets.logo}
-            width={180}
-            alt="Logo"
-          />
-          <button className="flex items-center gap-2 font-medium py-1 px-3 sm:px-6 sm:py-3 border border-solid border-black shadow-[-7px_7px_0px_#000]">
-            Get Started <Image src={assets.arrow} alt="get started" />
-          </button>
+          <Link href="/">
+            <Image
+              className="w-[130px] sm:w-[150px] cursor-pointer"
+              src={assets.logo}
+              width={180}
+              alt="Logo"
+            />
+          </Link>
+          <Link href="/admin/addProduct">
+            <button className="flex items-center gap-2 font-medium py-1 px-3 sm:px-6 sm:py-3 border border-solid border-black shadow-[-7px_7px_0px_#000] hover:bg-gray-100 transition-colors">
+              Get Started <Image src={assets.arrow} alt="get started" />
+            </button>
+          </Link>
         </div>
         <div className="text-center my-8">
           <h1 className="text-3xl sm:text-5xl font-medium">Latest Blogs</h1>

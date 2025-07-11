@@ -8,16 +8,17 @@ import axios from "axios";
 
 const Page = ({ params }) => {
   const [data, setData] = useState(null);
-  const fetchBlogData = async () => {
-    const response = await axios.get("/api/blog", {
-      params: { id: params.id },
-    });
-    setData(response.data);
-  };
-
+  
   useEffect(() => {
+    const fetchBlogData = async () => {
+      const response = await axios.get("/api/blog", {
+        params: { id: params.id },
+      });
+      setData(response.data);
+    };
+    
     fetchBlogData();
-  }, []);
+  }, [params.id]);
 
   return data ? (
     <>
@@ -31,9 +32,11 @@ const Page = ({ params }) => {
               className="w-[130px] sm:w-[150px]"
             />
           </Link>
-          <button className="flex items-center gap-2 font-medium py-1 px-3 sm:px-6 sm:py-3 border border-solid border-black shadow-[-7px_7px_0px_#000]">
-            Get Started <Image src={assets.arrow} alt="get started" />
-          </button>
+          <Link href="/admin/addProduct">
+            <button className="flex items-center gap-2 font-medium py-1 px-3 sm:px-6 sm:py-3 border border-solid border-black shadow-[-7px_7px_0px_#000] hover:bg-gray-100 transition-colors">
+              Get Started <Image src={assets.arrow} alt="get started" />
+            </button>
+          </Link>
         </div>
         <div className="overflow-hidden text-center my-24">
           <h1 className="text-2xl sm:text-5xl font-semibold max-w-[700px] mx-auto">
